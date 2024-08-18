@@ -1,0 +1,3 @@
+npm i => 
+means declare as dependency
+and install as well
