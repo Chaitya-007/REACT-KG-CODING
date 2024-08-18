@@ -1,5 +1,5 @@
 function App() {
-  return <div>placeholder</div>;
+  return <center>placeholder</center>;
 }
 
 export default App;
