@@ -10,8 +10,8 @@ function App() {
       <AppName />
       <AddTodo />
       <div className="items-container">
-        <TodoItem1 />
-        <TodoItem2 />
+        <TodoItem1></TodoItem1>
+        <TodoItem2></TodoItem2>
       </div>
     </center>
   );
