@@ -5,3 +5,5 @@ and install as well
 // jo css baad mai define hoti hai uski priority zyada hoti hai
 
 // jo class acchi lagi wo lelo aur uthake ismai daaldo
+
+// cd ../..
