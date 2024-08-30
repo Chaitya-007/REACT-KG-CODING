@@ -1,10 +1,8 @@
-import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
   return (
-    // <React.Fragment>
     <>
       <h1>Headlthy Food</h1>
       <ul class="list-group">
@@ -15,7 +13,6 @@ function App() {
         <li class="list-group-item">And a fifth one</li>
       </ul>
     </>
-    // </React.Fragment>
   );
 }
 
