@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <h1>Headlthy Food</h1>
+      <h1 className="food-heading">Headlthy Food</h1>
       {/* {foodItems.length === 0 ? <p>No items found</p> : null} */}
       {/* {value} */}
       <ErrorMessage items={foodItems}></ErrorMessage>

@@ -1,3 +1,5 @@
+import styles from "./Item.module.css";
+
 const Item = ({ foodItem }) => {
   // let { foodItem } = props;
 
@@ -5,10 +7,10 @@ const Item = ({ foodItem }) => {
     <li
       /*key={props.foodItem}*/
       key={foodItem}
-      className="list-group-item kg-item"
+      className={` ${styles["kg-item"]}`}
     >
       {/* {props.foodItem} */}
-      <span className="kg-span">{foodItem}</span>
+      <span className={styles["kg-span"]}>{foodItem}</span>
     </li>
   );
 };
