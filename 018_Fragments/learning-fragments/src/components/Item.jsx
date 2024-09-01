@@ -7,7 +7,7 @@ const Item = ({ foodItem }) => {
     <li
       /*key={props.foodItem}*/
       key={foodItem}
-      className={` ${styles["kg-item"]}`}
+      className={` ${styles["kg-item"]} list-group-item `}
     >
       {/* {props.foodItem} */}
       <span className={styles["kg-span"]}>{foodItem}</span>
