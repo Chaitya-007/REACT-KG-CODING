@@ -2,22 +2,25 @@ import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
 import TodoItems from "./components/TodoItems";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
-  const todoItems = [
-    {
-      name: "Buy Milk",
-      dueDate: "4/10/2023",
-    },
-    {
-      name: "Go To College",
-      dueDate: "4/10/2023",
-    },
-    {
-      name: "Like this video",
-      dueDate: "4/10/2023",
-    },
-  ];
+  let [todoItems, setToDoItems] = useState([]);
+
+  // const todoItems = [
+  //   {
+  //     name: "Buy Milk",
+  //     dueDate: "4/10/2023",
+  //   },
+  //   {
+  //     name: "Go To College",
+  //     dueDate: "4/10/2023",
+  //   },
+  //   {
+  //     name: "Like this video",
+  //     dueDate: "4/10/2023",
+  //   },
+  // ];
 
   return (
     <center className="todo-container">
