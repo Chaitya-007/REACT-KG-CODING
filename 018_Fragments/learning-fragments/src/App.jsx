@@ -4,9 +4,9 @@ import FoodItems from "./components/FoodItems";
 import ErrorMessage from "./components/ErrorMessage";
 import Container from "./components/Container.jsx";
 import FoodInput from "./components/FoodInput";
+import { useState } from "react";
 
 function App() {
-  let foodItems = ["Aalo", "Banana", "Orange", "Grapes", "Mango", "Green"];
   // let foodItems = [];
 
   // if (foodItems.length === 0) {
@@ -15,11 +15,17 @@ function App() {
 
   // let value = foodItems.length === 0 ? <p>No items found</p> : null;
 
-  let textToShow = "Entered food Item";
+  let [foodItems, setfoodItems] = useState([]);
 
-  const handlChange = (event) => {
-    console.log(event.target.value);
-    textToShow = event.target.value;
+  const onKeyDown = (event) => {
+    // console.log(event);
+    if (event.key === "Enter") {
+      let newFoodItem = event.target.value;
+      let newItems = [...foodItems, newFoodItem];
+      event.target.value = "";
+      setfoodItems(newItems);
+      console.log(`Value of new food item is ${newFoodItem}`);
+    }
   };
 
   return (
@@ -28,9 +34,8 @@ function App() {
         <h1 className="food-heading">Headlthy Food</h1>
         {/* {foodItems.length === 0 ? <p>No items found</p> : null} */}
         {/* {value} */}
+        <FoodInput handleKeyDown={onKeyDown}></FoodInput>
         <ErrorMessage items={foodItems}></ErrorMessage>
-        <FoodInput handlChange={handlChange}></FoodInput>
-        <p>{textToShow}</p>
         <FoodItems items={foodItems}></FoodItems>
       </Container>
 
