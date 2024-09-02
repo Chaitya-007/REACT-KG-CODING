@@ -15,8 +15,11 @@ function App() {
 
   // let value = foodItems.length === 0 ? <p>No items found</p> : null;
 
+  let textToShow = "Entered food Item";
+
   const handlChange = (event) => {
     console.log(event.target.value);
+    textToShow = event.target.value;
   };
 
   return (
@@ -27,6 +30,7 @@ function App() {
         {/* {value} */}
         <ErrorMessage items={foodItems}></ErrorMessage>
         <FoodInput handlChange={handlChange}></FoodInput>
+        <p>{textToShow}</p>
         <FoodItems items={foodItems}></FoodItems>
       </Container>
 
