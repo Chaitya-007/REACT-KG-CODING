@@ -24,9 +24,7 @@ const Item = ({ foodItem, bought, handleBuyButton }) => {
     >
       {/* {props.foodItem} */}
       <span className={styles["kg-span"]}>{foodItem}</span>
-      <button className={`${styles.button} btn btn-info`} onClick={handleColor}>
-        Buy
-      </button>
+      <button className={`${styles.button} btn btn-info`}>Buy</button>
     </li>
   );
 };
