@@ -1,6 +1,6 @@
 import styles from "./Item.module.css";
 
-const Item = ({ foodItem }) => {
+const Item = ({ foodItem, handleBuyButton }) => {
   // let { foodItem } = props;
 
   const handleButtonnCLicked = (event) => {
@@ -13,7 +13,7 @@ const Item = ({ foodItem }) => {
       /*key={props.foodItem}*/
       key={foodItem}
       className={` ${styles["kg-item"]} list-group-item `}
-      onClick={(event) => handleButtonnCLicked(event)}
+      onClick={handleBuyButton}
     >
       {/* {props.foodItem} */}
       <span className={styles["kg-span"]}>{foodItem}</span>
