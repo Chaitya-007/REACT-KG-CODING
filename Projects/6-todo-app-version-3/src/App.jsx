@@ -7,6 +7,10 @@ import { useState } from "react";
 function App() {
   let [todoItems, setToDoItems] = useState([]);
 
+  const handleNewItem = (itemName, itemDueDate) => {
+    console.log(`New Item Added : ${itemName} with due date : ${itemDueDate}`);
+  };
+
   // const todoItems = [
   //   {
   //     name: "Buy Milk",
@@ -25,7 +29,7 @@ function App() {
   return (
     <center className="todo-container">
       <AppName />
-      <AddTodo />
+      <AddTodo onNewItem={handleNewItem} />
       <TodoItems todoItems={todoItems}></TodoItems>
     </center>
   );
