@@ -3,6 +3,7 @@ import AddTodo from "./components/AddTodo";
 import TodoItems from "./components/TodoItems";
 import "./App.css";
 import { useState } from "react";
+import WelcomeMessage from "./components/WelcomeMessage";
 
 function App() {
   let [todoItems, setToDoItems] = useState([]);
@@ -36,6 +37,7 @@ function App() {
       <AppName />
       <AddTodo onNewItem={handleNewItem} />
       <TodoItems todoItems={todoItems}></TodoItems>
+      <WelcomeMessage todoItems={todoItems} />
     </center>
   );
 }
