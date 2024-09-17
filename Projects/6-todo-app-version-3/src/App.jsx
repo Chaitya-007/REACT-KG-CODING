@@ -21,7 +21,7 @@ function App() {
   const delmsg = (itemName) => {
     const newTodoItems = todoItems.filter((item) => item.name !== itemName);
     setToDoItems(newTodoItems);
-    console.log(`deleted ${itemName}`);
+    console.log(`Deleted ${itemName}`);
   };
 
   // const todoItems = [
