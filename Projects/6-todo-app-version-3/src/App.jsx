@@ -7,6 +7,7 @@ import WelcomeMessage from "./components/WelcomeMessage";
 
 function App() {
   let [todoItems, setToDoItems] = useState([]);
+  // let [todoDate, setTodoDate] = useState("");
 
   const handleNewItem = (itemName, itemDueDate) => {
     console.log(`New Item Added : ${itemName} with due date : ${itemDueDate}`);
@@ -15,6 +16,12 @@ function App() {
       { name: itemName, duedate: itemDueDate },
     ];
     setToDoItems(newTodoitems);
+  };
+
+  const delmsg = (itemName) => {
+    const newTodoItems = todoItems.filter((item) => item.name !== itemName);
+    setToDoItems(newTodoItems);
+    console.log(`deleted ${itemName}`);
   };
 
   // const todoItems = [
@@ -36,7 +43,7 @@ function App() {
     <center className="todo-container">
       <AppName />
       <AddTodo onNewItem={handleNewItem} />
-      <TodoItems todoItems={todoItems}></TodoItems>
+      <TodoItems todoItems={todoItems} delitem={delmsg}></TodoItems>
       <WelcomeMessage todoItems={todoItems} />
     </center>
   );

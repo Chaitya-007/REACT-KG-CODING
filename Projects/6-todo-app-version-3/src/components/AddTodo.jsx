@@ -9,10 +9,12 @@ function AddTodo({ onNewItem }) {
   };
 
   const handleDateChange = (event) => {
+    console.log("hello");
     setDueDate(event.target.value);
   };
 
   const handleAddButtonClicked = () => {
+    console.log("Add Button Clicked");
     onNewItem(todoName, dueDate);
     setDueDate("");
     setTodoName("");

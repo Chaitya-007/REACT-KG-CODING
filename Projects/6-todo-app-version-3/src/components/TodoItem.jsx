@@ -1,4 +1,4 @@
-function TodoItem({ todoName, todoDate }) {
+function TodoItem({ todoName, todoDate, method }) {
   // let todoName = "Buy Milk";
   // let todoDate = "4/10/2023";
 
@@ -8,7 +8,11 @@ function TodoItem({ todoName, todoDate }) {
         <div className="col-6">{todoName}</div>
         <div className="col-4">{todoDate}</div>
         <div className="col-2">
-          <button type="button" className="btn btn-danger kg-button">
+          <button
+            type="button"
+            className="btn btn-danger kg-button"
+            onClick={() => method(todoName)}
+          >
             Delete
           </button>
         </div>
