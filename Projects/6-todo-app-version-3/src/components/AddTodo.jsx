@@ -10,12 +10,13 @@ function AddTodo({ onNewItem }) {
   };
 
   const handleDateChange = (event) => {
-    console.log("hello");
+    // console.log("hello");
     setDueDate(event.target.value);
   };
 
-  const handleAddButtonClicked = () => {
-    console.log("Add Button Clicked");
+  const handleAddButtonClicked = (event) => {
+    event.preventDefault();
+    // console.log("Add Button Clicked");
     onNewItem(todoName, dueDate);
     setDueDate("");
     setTodoName("");
@@ -23,7 +24,7 @@ function AddTodo({ onNewItem }) {
 
   return (
     <div className="container text-center">
-      <div className="row kg-row">
+      <form className="row kg-row" onSubmit={handleAddButtonClicked}>
         <div className="col-6">
           <input
             type="text"
@@ -36,15 +37,11 @@ function AddTodo({ onNewItem }) {
           <input type="date" value={dueDate} onChange={handleDateChange} />
         </div>
         <div className="col-2">
-          <button
-            type="button"
-            className="btn btn-success kg-button"
-            onClick={handleAddButtonClicked}
-          >
+          <button type="submit" className="btn btn-success kg-button">
             <IoIosAddCircle />
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
