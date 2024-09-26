@@ -1,17 +1,21 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { IoIosAddCircle } from "react-icons/io";
 
 function AddTodo({ onNewItem }) {
   const [todoName, setTodoName] = useState("");
   const [dueDate, setDueDate] = useState("");
 
+  const noOfUpdates = useRef(0);
+
   const handleNameChange = (event) => {
     setTodoName(event.target.value);
+    noOfUpdates.current += 1;
   };
 
   const handleDateChange = (event) => {
     // console.log("hello");
     setDueDate(event.target.value);
+    console.log(`no of updates: ${noOfUpdates.current}`);
   };
 
   const handleAddButtonClicked = (event) => {
