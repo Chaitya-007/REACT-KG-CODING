@@ -11,11 +11,15 @@ function App() {
 
   const handleNewItem = (itemName, itemDueDate) => {
     console.log(`New Item Added : ${itemName} with due date : ${itemDueDate}`);
-    const newTodoitems = [
-      ...todoItems,
+    // const newTodoitems = [
+    //   ...todoItems,
+    //   { name: itemName, duedate: itemDueDate },
+    // ];
+    // setToDoItems(newTodoitems);
+    setToDoItems((currValue) => [
+      ...currValue,
       { name: itemName, duedate: itemDueDate },
-    ];
-    setToDoItems(newTodoitems);
+    ]);
   };
 
   const delmsg = (itemName) => {
