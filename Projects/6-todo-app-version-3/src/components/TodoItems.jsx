@@ -3,12 +3,12 @@ import styles from "./TodoItems.module.css";
 import { useContext } from "react";
 import { TodoItemsContext } from "../store/todo-items-store";
 
-const TodoItems = ({ delitem }) => {
+const TodoItems = () => {
   const setDel = (namme) => {
     delmsg(namme);
   };
 
-  const todoItems = useContext(TodoItemsContext);
+  const { todoItems, delmsg } = useContext(TodoItemsContext);
 
   return (
     <div className={styles.itemsContainer}>
@@ -16,7 +16,6 @@ const TodoItems = ({ delitem }) => {
         <TodoItem
           todoName={item.name}
           todoDate={item.duedate}
-          method={delitem}
           key={item.name}
         ></TodoItem>
       ))}

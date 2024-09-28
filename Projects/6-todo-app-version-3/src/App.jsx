@@ -47,11 +47,11 @@ function App() {
   // const defaultTodoItems = [todoItems];
 
   return (
-    <TodoItemsContext.Provider value={todoItems}>
+    <TodoItemsContext.Provider value={{ todoItems, handleNewItem, delmsg }}>
       <center className="todo-container">
         <AppName />
-        <AddTodo onNewItem={handleNewItem} />
-        <TodoItems delitem={delmsg}></TodoItems>
+        <AddTodo />
+        <TodoItems></TodoItems>
         <WelcomeMessage />
       </center>
     </TodoItemsContext.Provider>
