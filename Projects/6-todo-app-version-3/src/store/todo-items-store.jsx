@@ -18,8 +18,7 @@ const todoItemsReducer = (currTodoItems, action) => {
       ...currTodoItems,
       { name: action.payload.itemName, duedate: action.payload.itemDueDate },
     ];
-  } else action.type === "DELETE_TYPE";
-  {
+  } else if (action.type === "DELETE_TYPE") {
     newTodoItems = currTodoItems.filter(
       (item) => item.name !== action.payload.itemName
     );
