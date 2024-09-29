@@ -1,7 +1,7 @@
 const Sidebar = () => {
   return (
     <div
-      class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
+      class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar"
       style={{ width: "280px;" }}
     >
       <a
